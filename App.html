@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Inclusão javascript -->
+  <script src="js/jogo.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilo.css">
+  <title>Mata-Mosquito</title>
+</head>
+
+<body onresize="ajustaPalcoDoJogo()">
+  
+  <!-- Div painel tempo de vida -->
+  <div class="painel">
+    <div class="vidas">
+      <img id="v1" src="imagens/coracao_cheio.png" alt="">
+      <img id="v2" src="imagens/coracao_cheio.png" alt="">
+      <img id="v3" src="imagens/coracao_cheio.png" alt="">
+    </div>
+
+    <div class="cronometro">
+      Tempo Restante <span id="cronometro"></span>
+    </div>
+  </div><!-- Fim Div  -->
+
+  <!-- Inclusão javascript -->
+  <script>
+    document.getElementById('cronometro').innerHTML = tempo
+
+    // Função para executar o metodo "posicaoRandomica()" a cada 1000 segundos
+    var mosquito = setInterval(function () {
+      posicaoRandomica()
+    }, tempoMosquito);
+  </script>
+</body>
+
+</html>
